@@ -60,6 +60,6 @@ typedef BASE_LIBRARY_JUMP_BUFFER jmp_buf[1];
     specified by val. The longjmp function cannot cause the setjmp macro to
     return the value 0; if val is 0, the setjmp macro returns the value 1.
 **/
-extern void longjmp(jmp_buf env, int val);
+extern void NORETURN longjmp(jmp_buf env, int val);
 
 #endif  /* _SETJMP_H */
